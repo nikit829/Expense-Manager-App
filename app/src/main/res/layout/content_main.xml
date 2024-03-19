@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/background_color"
+        app:menu="@menu/bottommenu"
+        app:itemIconTint="@android:color/black">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+<!--    app:itemTextColor="@android:color/white"-->
+
+    <FrameLayout
+        android:id="@+id/mainframe"
+        android:layout_width="409dp"
+        android:layout_height="680dp"
+        android:layout="@+id/bottomNavigation">
+    </FrameLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="409dp"
+        android:layout_height="680dp"
+        android:layout="@+id/bottomNavigation">
+    </androidx.viewpager2.widget.ViewPager2>
+
+</RelativeLayout>
